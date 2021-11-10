@@ -1,0 +1,31 @@
+{
+  "produtos": [],
+  "empresas": [],
+  "setores": [
+    "Restaurante/Food Service",
+    "Supermercado/Hortifrúti",
+    "Distribuidor de alimentos",
+    "Indústria de alimento/bebida",
+    "Produtor Rural",
+    "Associação/Cooperativa",
+    "Consultor/Auditor"
+  ],
+  "fornecedores": [
+    "Lucato",
+    "Natural One",
+    "Cantu",
+    "Fischer",
+    "MNS",
+    "Grupo Benassi",
+    "Trebeschi Tomates",
+    "Coca-cola"
+  ],
+  "categorias": [
+    "Frutas",
+    "Legumes",
+    "Verduras",
+    "Cereais",
+    "Leguminosas",
+    "Grãos e sementes"
+  ]
+}
