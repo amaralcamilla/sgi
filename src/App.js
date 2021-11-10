@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import CompanyPage from './pages/companyPage';
+import ProductPage from './pages/productPage';
 
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
       <header className="App-header">
 
       </header>
+      <CompanyPage />
+      <ProductPage />
     </div>
   );
 }
