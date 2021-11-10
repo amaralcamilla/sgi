@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 const CompanyForm = () => {
   const [corporateName, setCorporateName] = useState("");
   const [tradeName, setTradeName] = useState("");
-  const [cnpj, setCnpj] = useState("");
   const [sector, setSector] = useState("");
   const [setores, setSetores] = useState([]);
+  const [cnpj, setCnpj] = useState(""); 
   const [email, setEmail] = useState("");
   const [cep, setCep] = useState("");
   const [address, setAddress] = useState("");
@@ -30,6 +30,7 @@ const CompanyForm = () => {
       body: JSON.stringify({
         corporate_name: corporateName,
         trade_name: tradeName,
+        sector: sector,
         cnpj: cnpj,
         email: email,
         cep: cep,
@@ -39,8 +40,7 @@ const CompanyForm = () => {
         city: city,
         uf: uf,
         address_comp: addressComp,
-        latitude: latitude,
-        longitude: longitude,
+        coordinates: [latitude, longitude]
       }),
     });
   };
