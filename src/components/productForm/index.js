@@ -1,4 +1,3 @@
-import "./style.css";
 import { useEffect, useState } from "react";
 
 const ProductForm = () => {
@@ -38,7 +37,7 @@ const ProductForm = () => {
       const suppliersData = await suppliersResult.json();
       setFornecedores(suppliersData);
     }
-      async function getCategories() {
+    async function getCategories() {
       const categoriesResult = await fetch("http://localhost:3333/categorias");
       const categoriesData = await categoriesResult.json();
       setCategorias(categoriesData);
@@ -51,10 +50,8 @@ const ProductForm = () => {
   //alert("Produto cadastrado com sucesso.")
 
   return (
-    <>
-      <header>
-        <h1 className="title-page">Cadastro de produto</h1>
-      </header>
+    <div className="content">
+      <h1 className="page-title">Cadastro de produto</h1>
 
       <form className="container-form" onSubmit={handleSubmit}>
         <label>
@@ -89,8 +86,8 @@ const ProductForm = () => {
         </label>
         <label>
           Descrição do produto:
-          <input
-            type="textarea"
+          <textarea
+            type="text"
             name="productDescription"
             value={productDescription}
             onChange={(e) => setProductDescription(e.target.value)}
@@ -135,7 +132,7 @@ const ProductForm = () => {
         <button className="btn-save">Salvar</button>
         <button className="btn-cancel">Cancelar</button>
       </form>
-    </>
+    </div>
   );
 };
 export default ProductForm;

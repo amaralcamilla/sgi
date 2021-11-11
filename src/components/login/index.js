@@ -1,14 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import Logo from "../../assets/logo192.png";
 
 const Login = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+  const Navigate = useNavigate();
 
   return (
-    <>
+    <div className="login-container">
+      <img className="logo" src={Logo} alt="logo" width="150" height="150" />
       <label>
         E-mail:
         <input
+          className="user-login"
           type="email"
           name="login"
           value={login}
@@ -19,6 +24,7 @@ const Login = () => {
       <label>
         Senha:
         <input
+          className="user-login"
           type="password"
           name="password"
           value={password}
@@ -27,8 +33,11 @@ const Login = () => {
         />
       </label>
 
-      <button>Entrar</button>
-    </>
+      <button className="btn-login" onSubmit={() => Navigate("/mapa")}>
+        {" "}
+        Entrar{" "}
+      </button>
+    </div>
   );
 };
 

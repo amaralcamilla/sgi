@@ -1,12 +1,11 @@
-import "./style.css";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const CompanyForm = () => {
   const [corporateName, setCorporateName] = useState("");
   const [tradeName, setTradeName] = useState("");
   const [sector, setSector] = useState("");
   const [setores, setSetores] = useState([]);
-  const [cnpj, setCnpj] = useState(""); 
+  const [cnpj, setCnpj] = useState("");
   const [email, setEmail] = useState("");
   const [cep, setCep] = useState("");
   const [address, setAddress] = useState("");
@@ -40,7 +39,7 @@ const CompanyForm = () => {
         city: city,
         uf: uf,
         address_comp: addressComp,
-        coordinates: [latitude, longitude]
+        coordinates: [latitude, longitude],
       }),
     });
   };
@@ -57,10 +56,9 @@ const CompanyForm = () => {
   //alert("Empresa cadastrada com sucesso.")
 
   return (
-    <>
-      <header>
-        <h1 className="title-page">Cadastro de empresa</h1>
-      </header>
+    <div className="content">
+     
+        <h1 className="page-title">Cadastro de empresa</h1>
 
       <form className="container-form" onSubmit={handleSubmit}>
         <label>
@@ -85,7 +83,6 @@ const CompanyForm = () => {
             required
           />
         </label>
-
         <label>
           Setor:
           <select
@@ -101,7 +98,6 @@ const CompanyForm = () => {
             ))}
           </select>
         </label>
-
         <label>
           CNPJ:
           <input
@@ -124,9 +120,7 @@ const CompanyForm = () => {
             required
           />
         </label>
-
         <hr></hr>
-
         <label>
           CEP:
           <input
@@ -160,9 +154,6 @@ const CompanyForm = () => {
             required
           />
         </label>
-
-        <br />
-
         <label>
           Bairro:
           <input
@@ -197,7 +188,6 @@ const CompanyForm = () => {
           />
         </label>
         <label>
-          <br />
           Complemento:
           <input
             type="text"
@@ -207,9 +197,6 @@ const CompanyForm = () => {
             placeholder="Próximo à praça central."
           />
         </label>
-
-        <br />
-
         <label>
           Latitude:
           <input
@@ -236,7 +223,8 @@ const CompanyForm = () => {
         <button className="btn-save">Salvar</button>
         <button className="btn-cancel">Cancelar</button>
       </form>
-    </>
+
+    </div>
   );
 };
 

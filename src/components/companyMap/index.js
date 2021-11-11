@@ -1,6 +1,5 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "./style.css";
 import { useState, useEffect } from "react";
 
 const CompanyMap = () => {
@@ -43,31 +42,3 @@ const CompanyMap = () => {
 };
 
 export default CompanyMap;
-
-// const [sector, setSector] = useState("");
-// const [setores, setSetores] = useState([]);
-
-// useEffect(() => {
-//   async function getSector() {
-//     const sectorResult = await fetch("http://localhost:3333/setores");
-//     const sectorData = await sectorResult.json();
-//     setSetores(sectorData);
-//   }
-//   getSector();
-// }, []);
-
-{
-  /* <label>
-          Setor:
-          <select
-            name="sector"
-            value={sector}
-            onChange={(e) => setSector(e.target.value)}>
-            <option value="" selected disabled>
-              Selecione
-            </option>
-            {setores.map((sector) => (
-              <option value={sector}>{sector}</option>
-            ))}
-          </select> */
-}
