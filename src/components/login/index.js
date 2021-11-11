@@ -9,9 +9,10 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <img className="logo" src={Logo} alt="logo" width="150" height="150" />
+      <img className="logo" src={Logo} alt="logo" width="150" height="100" />
+      <h3>Sistema de Gestão Integrada</h3>
       <label>
-        E-mail:
+        E-mail
         <input
           className="user-login"
           type="email"
@@ -22,7 +23,7 @@ const Login = () => {
         />
       </label>
       <label>
-        Senha:
+        Senha
         <input
           className="user-login"
           type="password"
@@ -32,8 +33,10 @@ const Login = () => {
           required
         />
       </label>
-
-      <button className="btn-login" onSubmit={() => Navigate("/mapa")}>
+      <p className="info-account">Esqueci minha senha</p>
+      <p className="info-account">Ainda não tem conta? <strong> Criar conta</strong></p>
+      {/*Alterar onClick para onSubmit*/}
+      <button className="btn-login" onClick={() => Navigate("/mapa")}>
         {" "}
         Entrar{" "}
       </button>
