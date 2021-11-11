@@ -5,6 +5,32 @@ Azul de apoio #1aaacc
 Verde de apoio #5FBB46
 Amarelo de apoio #ffbf00
 */
+label {
+  color: #353535be;
+  padding: 5px;
+  margin: 10px 0px 0px 0px;
+}
+input, select, textarea {
+  border: 1px solid #35353572;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 4px;
+  outline: 0;
+}
+input:focus{
+  border: 1px solid #0066A0;
+}
+h1{
+  color: #0066a0;
+}
+h3 {
+  margin: 0px 0px 20px 0px;
+  color: #0066a0;
+}
+hr{
+  margin-bottom: 20px;
+}
 .nav-bar {
   background-color: #0066a0;
   display: flex;
@@ -16,91 +42,97 @@ Amarelo de apoio #ffbf00
 .white-logo {
   margin-left: 20px;
 }
-
 .menu {
   display: flex;
   flex-direction: row;
   margin-right: 20px;
 }
-
+.page-title {
+  display: block;
+}
 .menu-item,
 .btn-login,
-.btn-logout {
+.btn-logout,
+.btn-add-company {
   background-color: transparent;
-  padding: 10px 15px 10px 15px;
-  margin: 5px;
+  padding: 8px;
+  margin: 8px;
   cursor: pointer;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.405);
   border: none;
 }
-
 .menu-item:hover {
   background-color: #1aabcc44;
-  border-radius: 20px;
+  border-radius: 50%;
 }
-
-.btn-login,
 .btn-logout {
   background-color: #5fbb46;
-  border-radius: 20px;
+  border-radius: 50%;
+  padding-left: 12px;
 }
-
-.btn-login:hover, .btn-logout:hover {
+.btn-logout:hover {
   background-color: #494949b0;
-  border-radius: 20px;
+  border-radius: 50%;
 }
-
-.btn-login{
-    padding: 10px 25px 10px 25px;
-    margin: 20px;
-}
-
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
-  margin: 20% auto;
+  margin: 7% auto;
   border: 1px solid #35353572;
   border-radius: 10px;
-  width: 50%;
+  width: 400px;
 }
-
-.page-title {
-  display: block;
+.user-login {
+  width: 280px;
+}
+.info-account{
+  align-self: flex-start;
+  margin: 0% 13%;
+  font-size: 0.8em;
+  padding: 1px;
+  color: #353535be;
+}
+.info-account:hover{
+  color: #0066a0;  
+  cursor: pointer;
+  text-decoration: underline;
+}
+.logo {
+  object-fit: cover;
+  margin-top: 20px;
+}
+.btn-login {
+  background-color: #0066a0;
+  padding: 13px 40px 13px 40px;
+  margin: 40px 0px 30px 0px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.btn-login:hover {
+  background-color: #5fbb46;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px #0000008c;
 }
 .map-container {
-  width: 80%;
+  width: 90%;
   margin: 10px auto;
   display: flex;
   justify-content: center;
 }
-
 .leaflet-container {
   width: 80%;
-  height: 80vh;
+  height: 75vh;
 }
-.content {
+.add-company {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 13%;
 }
-.container-form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-label {
-  color: #353535;
-  display: block;
-  padding: 5px;
-}
-input {
-  border: 1px solid #35353572;
-  display: block;
-  padding: 5px;
-  border-radius: 5px;
-}
-.user-login {
-  width: 250px;
+.btn-add-company {
+  background-color: #5fbb46;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px 20px 10px 20px;
 }

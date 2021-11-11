@@ -51,84 +51,100 @@ const ProductForm = () => {
 
   return (
     <div className="content">
-      <h1 className="page-title">Cadastro de produto</h1>
-
       <form className="container-form" onSubmit={handleSubmit}>
-        <label>
-          URL da imagem:
-          <input
-            type="text"
-            name="imageURL"
-            value={imageUrl}
-            onChange={(e) => setImageUrl(e.target.value)}
-            placeholder="http://"
-          />
-        </label>
-        <label>
-          Nome do produto:
-          <input
-            type="text"
-            name="productName"
-            value={productName}
-            onChange={(e) => setProductName(e.target.value)}
-            placeholder="Melancia"
-          />
-        </label>
-        <label>
-          Preço unitário:
-          <input
-            type="number"
-            name="price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            placeholder="21,99"
-          />
-        </label>
-        <label>
-          Descrição do produto:
-          <textarea
-            type="text"
-            name="productDescription"
-            value={productDescription}
-            onChange={(e) => setProductDescription(e.target.value)}
-            placeholder="Rico em vitaminas e minerais."
-          />
-        </label>
+        <h1 className="page-title">Cadastro de produto</h1>
+        <div className="form-group">
+          <label>
+            URL da imagem
+            <input
+              type="text"
+              name="imageURL"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+              placeholder="http://"
+            />
+          </label>
+        </div>
 
-        <hr></hr>
+        <div className="form-row">
+          <div className="form-group size2">
+            <label>
+              Nome do produto
+              <input
+                type="text"
+                name="productName"
+                value={productName}
+                onChange={(e) => setProductName(e.target.value)}
+                placeholder="Melancia"
+              />
+            </label>
+          </div>
 
-        <label>
-          Fornecedor do produto:
-          <select
-            name="suppliers"
-            value={suppliers}
-            onChange={(e) => setSuppliers(e.target.value)}
-          >
-            <option value="" selected disabled>
-              Selecione
-            </option>
-            {fornecedores.map((suppliers) => (
-              <option value={suppliers}>{suppliers}</option>
-            ))}
-          </select>
-        </label>
+          <div className="form-group size3">
+            <label>
+              Preço unitário
+              <input
+                type="number"
+                name="price"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                placeholder="21,99"
+              />
+            </label>
+          </div>
+        </div>
 
-        <label>
-          Grupo/Categoria:
-          <select
-            name="categories"
-            value={categories}
-            onChange={(e) => setCategories(e.target.value)}
-          >
-            <option value="" selected disabled>
-              Selecione
-            </option>
-            {categorias.map((categories) => (
-              <option value={categories}>{categories}</option>
-            ))}
-          </select>
-        </label>
+        <div className="form-group">
+          <label>
+            Descrição do produto
+            <textarea
+              type="text"
+              name="productDescription"
+              rows="6"
+              cols="60"
+              value={productDescription}
+              onChange={(e) => setProductDescription(e.target.value)}
+              placeholder="Rico em vitaminas e minerais."
+            />
+          </label>
+        </div>
 
+        <div className="form-row">
+          <div className="form-group size2">
+            <label>
+              Fornecedor do produto
+              <select
+                name="suppliers"
+                value={suppliers}
+                onChange={(e) => setSuppliers(e.target.value)}
+              >
+                <option value="" selected disabled>
+                  Selecione
+                </option>
+                {fornecedores.map((suppliers) => (
+                  <option value={suppliers}>{suppliers}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div className="form-group size2">
+            <label>
+              Grupo/Categoria
+              <select
+                name="categories"
+                value={categories}
+                onChange={(e) => setCategories(e.target.value)}
+              >
+                <option value="" selected disabled>
+                  Selecione
+                </option>
+                {categorias.map((categories) => (
+                  <option value={categories}>{categories}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </div>
         <button className="btn-save">Salvar</button>
         <button className="btn-cancel">Cancelar</button>
       </form>
