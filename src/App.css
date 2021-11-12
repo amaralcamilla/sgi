@@ -5,30 +5,37 @@ Azul de apoio #1aaacc
 Verde de apoio #5FBB46
 Amarelo de apoio #ffbf00
 */
+* {
+  box-sizing: border-box;
+}
 label {
-  color: #353535be;
-  padding: 5px;
+  color: #353535;
   margin: 10px 0px 0px 0px;
 }
 input, select, textarea {
   border: 1px solid #35353572;
-  display: block;
   padding: 8px;
   border-radius: 5px;
   margin-top: 4px;
   outline: 0;
+  font-family: inherit;
+  width: 100%;
 }
-input:focus{
-  border: 1px solid #0066A0;
+input:focus {
+  border: 1px solid #0066a0;
 }
-h1{
+input[type="radio"] {
+  width: max-content;
+  margin-left: 10px;
+}
+h1 {
   color: #0066a0;
 }
 h3 {
   margin: 0px 0px 20px 0px;
   color: #0066a0;
 }
-hr{
+hr {
   margin-bottom: 20px;
 }
 .nav-bar {
@@ -40,12 +47,12 @@ hr{
   margin-bottom: 20px;
 }
 .white-logo {
-  margin-left: 20px;
+  margin-left: 80px;
 }
 .menu {
   display: flex;
   flex-direction: row;
-  margin-right: 20px;
+  margin-right: 80px;
 }
 .page-title {
   display: block;
@@ -87,15 +94,15 @@ hr{
 .user-login {
   width: 280px;
 }
-.info-account{
+.info-account {
   align-self: flex-start;
   margin: 0% 13%;
   font-size: 0.8em;
   padding: 1px;
   color: #353535be;
 }
-.info-account:hover{
-  color: #0066a0;  
+.info-account:hover {
+  color: #0066a0;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -135,4 +142,65 @@ hr{
   border-radius: 20px;
   margin: 10px;
   padding: 10px 20px 10px 20px;
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.item-79 {
+  flex-basis: 79%;
+}
+.item-59 {
+  flex-basis: 59%;
+}
+.item-49 {
+  flex-basis: 49%;
+}
+.item-29 {
+  flex-basis: 29%;
+}
+.item-19 {
+  flex-basis: 19%;
+  align-self: flex-end;
+}
+.item-9 {
+  flex-basis: 9%;
+}
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.btn-save,
+.btn-cancel {
+  background-color: transparent;
+  padding: 8px;
+  margin: 8px;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.405);
+  border: none;
+  margin: 20px 0px 20px 0px;
+  border-radius: 20px;
+}
+.btn-save {
+  background-color: #5fbb46;
+  padding: 13px 30px;
+  font-weight: bold;
+}
+.btn-save:hover {
+  background-color: #0066a0;
+}
+.btn-cancel {
+  background-color: #494949b0;
+  padding: 13px 20px;
+}
+.btn-cancel:hover {
+  background-color: #494949d9;
 }
