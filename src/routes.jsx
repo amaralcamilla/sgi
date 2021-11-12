@@ -1,4 +1,3 @@
-import Header from "./components/header";
 import LoginPage from "./pages/loginPage";
 import MapPage from "./pages/mapPage";
 import CompanyPage from "./pages/companyPage";

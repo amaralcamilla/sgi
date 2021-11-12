@@ -1,19 +1,40 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import "./style.css";
 
 const ProductForm = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
-  const [productDescription, setProductDescription] = useState("");
+  const [measure, setMeasure] = useState("un.");
   const [suppliers, setSuppliers] = useState("");
   const [fornecedores, setFornecedores] = useState([]);
   const [categories, setCategories] = useState("");
   const [categorias, setCategorias] = useState([]);
+  const [productDescription, setProductDescription] = useState("");
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    event.target.checkValidity();
+    try {
+      event.preventDefault();
+      if (!productName) {
+        alert("Nome do produto é um campo obrigatório.");
+        return;
+      } else if (!price) {
+        alert("Preço é um campo obrigatório.");
+        return;
+      } else if (!suppliers) {
+        alert("Selecione um fornecedor.");
+        return;
+      } else if (!categories) {
+        alert("Selecione um grupo/categoria.");
+        return;
+      }
+      event.target.checkValidity();
+      alert("Produto cadastrado com sucesso!");
+      navigate("/mapa");
+    } catch (error) {
+      alert("Desculpe o transtorno. Estamos resolvendo o problema.");
+    }
 
     const response = await fetch("http://localhost:3333/produtos", {
       headers: {
@@ -25,9 +46,10 @@ const ProductForm = () => {
         image_url: imageUrl,
         product_name: productName,
         price: price,
-        product_description: productDescription,
+        measure: measure,
         suppliers: suppliers,
         categories: categories,
+        product_description: productDescription,
       }),
     });
   };
@@ -48,107 +70,139 @@ const ProductForm = () => {
   }, []);
 
   //alert("Produto cadastrado com sucesso.")
-
+  const navigate = useNavigate();
   return (
-    <div className="content">
-      <form className="container-form" onSubmit={handleSubmit}>
-        <h1 className="page-title">Cadastro de produto</h1>
-        <div className="form-group">
+    <form className="container-form" onSubmit={handleSubmit}>
+      <h1 className="page-title">Cadastro de produto</h1>
+      <hr />
+      <div className="product-image-container">
+        {imageUrl && <img className="product-image" src={imageUrl} />}
+      </div>
+      <div className="form-group">
+        <label>
+          URL da imagem
+          <input
+            type="url"
+            name="imageURL"
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            placeholder="http://"
+          />
+        </label>
+      </div>
+
+      <div className="form-row">
+        <div className="item-59">
           <label>
-            URL da imagem
+            Nome do produto*
             <input
               type="text"
-              name="imageURL"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
-              placeholder="http://"
+              name="productName"
+              value={productName}
+              onChange={(e) => setProductName(e.target.value)}
+              placeholder="Melancia"
+              required
             />
           </label>
         </div>
 
-        <div className="form-row">
-          <div className="form-group size2">
-            <label>
-              Nome do produto
-              <input
-                type="text"
-                name="productName"
-                value={productName}
-                onChange={(e) => setProductName(e.target.value)}
-                placeholder="Melancia"
-              />
-            </label>
-          </div>
-
-          <div className="form-group size3">
-            <label>
-              Preço unitário
-              <input
-                type="number"
-                name="price"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                placeholder="21,99"
-              />
-            </label>
-          </div>
-        </div>
-
-        <div className="form-group">
+        <div className="item-19">
           <label>
-            Descrição do produto
-            <textarea
-              type="text"
-              name="productDescription"
-              rows="6"
-              cols="60"
-              value={productDescription}
-              onChange={(e) => setProductDescription(e.target.value)}
-              placeholder="Rico em vitaminas e minerais."
+            Preço*
+            <input
+              type="number"
+              name="price"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              placeholder="21,99"
+              required
             />
           </label>
         </div>
 
-        <div className="form-row">
-          <div className="form-group size2">
-            <label>
-              Fornecedor do produto
-              <select
-                name="suppliers"
-                value={suppliers}
-                onChange={(e) => setSuppliers(e.target.value)}
-              >
-                <option value="" selected disabled>
-                  Selecione
-                </option>
-                {fornecedores.map((suppliers) => (
-                  <option value={suppliers}>{suppliers}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <div className="form-group size2">
-            <label>
-              Grupo/Categoria
-              <select
-                name="categories"
-                value={categories}
-                onChange={(e) => setCategories(e.target.value)}
-              >
-                <option value="" selected disabled>
-                  Selecione
-                </option>
-                {categorias.map((categories) => (
-                  <option value={categories}>{categories}</option>
-                ))}
-              </select>
-            </label>
-          </div>
+        <div className="item-19">
+          <label>
+            <input
+              type="radio"
+              name="kg"
+              value="kg"
+              onChange={(e) => setMeasure(e.target.value)}
+              checked
+            />
+            un.
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="kg"
+              value={measure}
+              onChange={(e) => setMeasure(e.target.value)}
+            />
+            kg
+          </label>
         </div>
-        <button className="btn-save">Salvar</button>
-        <button className="btn-cancel">Cancelar</button>
-      </form>
-    </div>
+      </div>
+
+      <div className="form-row">
+        <div className="item-49">
+          <label>
+            Fornecedor*
+            <select
+              name="suppliers"
+              value={suppliers}
+              onChange={(e) => setSuppliers(e.target.value)}
+              required
+            >
+              <option value="" selected disabled>
+                Selecione
+              </option>
+              {fornecedores.map((suppliers) => (
+                <option value={suppliers}>{suppliers}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <div className="item-49">
+          <label>
+            Grupo/Categoria*
+            <select
+              name="categories"
+              value={categories}
+              onChange={(e) => setCategories(e.target.value)}
+              required
+            >
+              <option value="" selected disabled>
+                Selecione
+              </option>
+              {categorias.map((categories) => (
+                <option value={categories}>{categories}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+      </div>
+      <div className="item-100">
+        <label>
+          Descrição do produto
+          <textarea
+            type="text"
+            name="productDescription"
+            rows="3"
+            value={productDescription}
+            onChange={(e) => setProductDescription(e.target.value)}
+            placeholder="Rico em vitaminas e minerais."
+          />
+        </label>
+      </div>
+      <div className="btn-group">
+      <button className="btn-save" onSubmit={handleSubmit}>
+          Salvar
+        </button>
+        <button className="btn-cancel" onClick={() => navigate("/mapa")}>
+          Cancelar
+        </button>
+      </div>
+    </form>
   );
 };
 export default ProductForm;
