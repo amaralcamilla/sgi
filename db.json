@@ -113,7 +113,7 @@
       "city": "Teresina",
       "uf": "PI",
       "address_comp": "Próx. igreja",
-      "coordinates": ["-5.206898743987126, -42.75516577437415"],
+      "coordinates": ["-5.206898743987126", "-42.75516577437415"],
       "id": 2
     },
     {
@@ -130,7 +130,7 @@
       "neighborhood": "Jardim da Luz",
       "city": "Goiânia",
       "uf": "GO",
-      "coordinates": ["-16.726271335038117, -49.22774648843676"],
+      "coordinates": ["-16.726271335038117", "-49.22774648843676"],
       "id": 3
     },
     {
@@ -147,7 +147,7 @@
       "neighborhood": "Distrito Industrial",
       "city": "Manaus",
       "uf": "AM",
-      "coordinates": ["-3.1115885665914957, -59.9635257839419"],
+      "coordinates": ["-3.1115885665914957", "-59.9635257839419"],
       "id": 4
     },
     {
@@ -164,7 +164,7 @@
       "neighborhood": "Bela Vista",
       "city": "Vitória da Conquista",
       "uf": "BA",
-      "coordinates": ["-14.893244355796813, -40.83123389701992"],
+      "coordinates": ["-14.893244355796813", "-40.83123389701992"],
       "id": 5
     }
   ],
