@@ -39,7 +39,7 @@ h3 {
   text-align: center;
 }
 hr {
-  margin-bottom: 20px;
+  margin: 10px 0px 30px 0px;
   width: 100%;
 }
 .nav-bar {
@@ -60,6 +60,7 @@ hr {
 }
 .page-title {
   display: block;
+  margin-bottom: 5px;
 }
 .menu-item,
 .btn-login,
@@ -161,6 +162,11 @@ hr {
 .form-row {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
+}
+.item-99{
+  flex-basis: 99%;
+  margin-bottom: 10px;
 }
 .item-79 {
   flex-basis: 79%;

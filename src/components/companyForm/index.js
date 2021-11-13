@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import {mask} from 'remask'
 
 const CompanyForm = () => {
   const [corporateName, setCorporateName] = useState("");
@@ -100,12 +101,14 @@ const CompanyForm = () => {
         coordinates: [latitude, longitude],
       }),
     });
-    console.log(response)
-  }; 
+    console.log(response);
+  };
 
   useEffect(() => {
     async function getSector() {
-      const sectorResult = await fetch("https://sgi-server.herokuapp.com/setores");
+      const sectorResult = await fetch(
+        "https://sgi-server.herokuapp.com/setores"
+      );
       const sectorData = await sectorResult.json();
       setSetores(sectorData);
     }
@@ -114,9 +117,9 @@ const CompanyForm = () => {
 
   //alert("Empresa cadastrada com sucesso.")
   return (
-    <form className="container-form" onSubmit={handleSubmit}> 
+    <form className="container-form" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de empresa</h1>
-     <hr />
+      <hr />
 
       <div className="form-row">
         <div className="item-49">
@@ -154,7 +157,7 @@ const CompanyForm = () => {
               type="text"
               name="cnpj"
               value={cnpj}
-              onChange={(e) => setCnpj(e.target.value)}
+              onChange={(e) => setCnpj(mask(e.target.value, ['99.999.999/9999-99']))}
               placeholder="00.000.000/0000-00"
               required
             />
@@ -180,7 +183,7 @@ const CompanyForm = () => {
         </div>
       </div>
 
-      <div className="item-100">
+      <div className="item-99">
         <label>
           E-mail*
           <input
@@ -194,7 +197,7 @@ const CompanyForm = () => {
         </label>
       </div>
 
-      <div className="item-100">
+      <div className="item-99">
         <label>
           Site da empresa
           <input
@@ -207,8 +210,6 @@ const CompanyForm = () => {
         </label>
       </div>
 
-      <hr />
-
       <div className="form-row">
         <div className="item-19">
           <label>
@@ -217,7 +218,7 @@ const CompanyForm = () => {
               type="text"
               name="cep"
               value={cep}
-              onChange={(e) => setCep(e.target.value)}
+              onChange={(e) => setCep(mask(e.target.value, ['99.999-999']))}
               placeholder="00.000-000"
               required
             />

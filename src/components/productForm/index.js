@@ -121,7 +121,7 @@ const ProductForm = () => {
               name="price"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              placeholder="3,79"
+              placeholder="R$ 3,79"
               required
             />
           </label>
