@@ -12,7 +12,9 @@ label {
   color: #353535;
   margin: 10px 0px 0px 0px;
 }
-input, select, textarea {
+input,
+select,
+textarea {
   border: 1px solid #35353572;
   padding: 8px;
   border-radius: 5px;
@@ -37,6 +39,7 @@ h3 {
 }
 hr {
   margin-bottom: 20px;
+  width: 100%;
 }
 .nav-bar {
   background-color: #0066a0;
