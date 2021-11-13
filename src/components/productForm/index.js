@@ -82,7 +82,7 @@ const ProductForm = () => {
       <hr />
       <div className="product-image-container">
         {imageUrl && (
-          <img className="product-image" src={imageUrl} alt="product-image" />
+          <img className="product-image" src={imageUrl} alt="product" />
         )}
       </div>
       <div className="form-group">
