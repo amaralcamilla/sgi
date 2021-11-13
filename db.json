@@ -1,6 +1,75 @@
 {
-  "produtos": [],
-  "empresas": [],
+  "produtos": [
+    {
+      "image_url": "https://images.pexels.com/photos/161559/background-bitter-breakfast-bright-161559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "product_name": "Laranja",
+      "price": "756",
+      "measure": "",
+      "suppliers": "Trebeschi Tomates",
+      "categories": "Outra",
+      "product_description": "786867",
+      "id": 1
+    }
+  ],
+  "empresas": [
+    {
+      "corporate_name": "Super DEV",
+      "trade_name": "DEVinMarket",
+      "sector": "Consultor/Auditor",
+      "cnpj": "43.345.345/5345-54",
+      "email": "company@mail.com",
+      "cep": "55778544",
+      "address": "Av Brasil",
+      "address_number": "887",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "uf": "SC",
+      "address_comp": "Próx. à praça",
+      "coordinates": [
+        "-27.097795",
+        "-48.595447"
+      ],
+      "id": 1
+    },
+    {
+      "corporate_name": "Supermarket",
+      "trade_name": "Ofertão",
+      "sector": "Supermercado/Hortifrúti",
+      "cnpj": "435654765",
+      "email": "company@mail.com",
+      "cep": "3465867",
+      "address": "Av Piaui",
+      "address_number": "5786",
+      "neighborhood": "Centro",
+      "city": "Teresina",
+      "uf": "PI",
+      "address_comp": "Próx. igreja",
+      "coordinates": [
+        "-5.090102",
+        "-42.795593"
+      ],
+      "id": 2
+    },
+    {
+      "corporate_name": "Agroindústria de grãos S/A",
+      "trade_name": "Santo Grão",
+      "cnpj": "4354536547/5755-65",
+      "sector": "Indústria de alimento/bebida",
+      "email": "email@email.com.br",
+      "cep": "23454325",
+      "address": "Rua Mato Grosso do Sul",
+      "address_number": "967",
+      "address_comp": "lj. 456",
+      "neighborhood": "Bom Sucesso",
+      "city": "Arara do Rio Branco",
+      "uf": "MT",
+      "coordinates": [
+        "-9.656270",
+        "-59.512193"
+      ],
+      "id": 3
+    }
+  ],
   "setores": [
     "Restaurante/Food Service",
     "Supermercado/Hortifrúti",
@@ -26,6 +95,7 @@
     "Verduras",
     "Cereais",
     "Leguminosas",
-    "Grãos e sementes"
+    "Grãos e sementes",
+    "Outra"
   ]
 }

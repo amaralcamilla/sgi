@@ -7,7 +7,7 @@ const CompanyMap = () => {
 
   useEffect(() => {
     async function getCompany() {
-      const companyResult = await fetch("http://localhost:3333/empresas");
+      const companyResult = await fetch("https://sgi-server.herokuapp.com/empresas");
       const companyData = await companyResult.json();
       setCompanies(companyData);
     }

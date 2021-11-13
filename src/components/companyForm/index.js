@@ -77,7 +77,7 @@ const CompanyForm = () => {
       alert("Desculpe o transtorno. Estamos resolvendo o problema.");
     }
 
-    const response = await fetch("http://localhost:3333/empresas", {
+    const response = await fetch("https://sgi-server.herokuapp.com/empresas", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -100,11 +100,11 @@ const CompanyForm = () => {
         coordinates: [latitude, longitude],
       }),
     });
-  };
+  }; 
 
   useEffect(() => {
     async function getSector() {
-      const sectorResult = await fetch("http://localhost:3333/setores");
+      const sectorResult = await fetch("https://sgi-server.herokuapp.com/setores");
       const sectorData = await sectorResult.json();
       setSetores(sectorData);
     }
