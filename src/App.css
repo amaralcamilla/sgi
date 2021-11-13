@@ -36,6 +36,7 @@ h1 {
 h3 {
   margin: 0px 0px 20px 0px;
   color: #0066a0;
+  text-align: center;
 }
 hr {
   margin-bottom: 20px;
@@ -88,18 +89,15 @@ hr {
 .login-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin: 7% auto;
   border: 1px solid #35353572;
   border-radius: 10px;
   width: 400px;
 }
-.user-login {
-  width: 280px;
-}
 .info-account {
   align-self: flex-start;
-  margin: 0% 13%;
+  margin: 0 8%;
   font-size: 0.8em;
   padding: 1px;
   color: #353535be;
@@ -112,13 +110,21 @@ hr {
 .logo {
   object-fit: cover;
   margin-top: 20px;
+  align-self: center;
+}
+.login-form {
+  width: 85%;
+  align-self: center;
+  margin-top: 10px;
 }
 .btn-login {
   background-color: #0066a0;
-  padding: 13px 40px 13px 40px;
-  margin: 40px 0px 30px 0px;
+  padding: 13px 40px;
+  margin: 40px 0px;
   border-radius: 20px;
   font-weight: bold;
+  width: 150px;
+  align-self: center;
 }
 .btn-login:hover {
   background-color: #5fbb46;

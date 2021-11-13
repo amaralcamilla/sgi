@@ -5,7 +5,7 @@ import Logo from "../../assets/logo192.png";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     try {
@@ -23,7 +23,7 @@ const Login = () => {
       } else if (!password) {
         alert("Preencha sua senha.");
         return;
-      }else if(password.length < 6) {
+      } else if (password.length < 6) {
         alert("A senha deve ter no mínimo 6 caracteres.");
         return;
       }
@@ -38,34 +38,38 @@ const Login = () => {
     <form className="login-container" onSubmit={handleSubmit}>
       <img className="logo" src={Logo} alt="logo" width="150" height="100" />
       <h3>Sistema de Gestão Integrada</h3>
-      <label>
-        E-mail
-        <input
-          className="user-login"
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Senha
-        <input
-          className="user-login"
-          type="password"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <p className="info-account">Esqueci minha senha</p>
-      <p className="info-account">
-        Ainda não tem conta? <strong> Criar conta</strong>
-      </p>
+      <div className="login-form">
+        <label>
+          E-mail
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        </div>
+        <div className="login-form">
+        <label>
+          Senha
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+      </div>
 
-      {/*Alterar onClick para onSubmit*/}
+      <div>
+        <p className="info-account">Esqueci minha senha</p>
+        <p className="info-account"> Ainda não tem conta?
+          <strong> Criar conta</strong>
+        </p>
+      </div>
+
       <button className="btn-login" type="submit">
         Entrar
       </button>

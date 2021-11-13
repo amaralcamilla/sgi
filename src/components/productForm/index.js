@@ -85,7 +85,7 @@ const ProductForm = () => {
           <img className="product-image" src={imageUrl} alt="product" />
         )}
       </div>
-      <div className="form-group">
+      <div>
         <label>
           URL da imagem
           <input
