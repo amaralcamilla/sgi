@@ -6,7 +6,7 @@ const ProductForm = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
-  const [measure, setMeasure] = useState("un.");
+  const [measure, setMeasure] = useState("");
   const [suppliers, setSuppliers] = useState("");
   const [fornecedores, setFornecedores] = useState([]);
   const [categories, setCategories] = useState("");
@@ -36,7 +36,7 @@ const ProductForm = () => {
       alert("Desculpe o transtorno. Estamos resolvendo o problema.");
     }
 
-    const response = await fetch("http://localhost:3333/produtos", {
+    const response = await fetch("https://sgi-server.herokuapp.com/produtos", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -52,15 +52,20 @@ const ProductForm = () => {
         product_description: productDescription,
       }),
     });
+    console.log(response);
   };
   useEffect(() => {
     async function getSuppliers() {
-      const suppliersResult = await fetch("http://localhost:3333/fornecedores");
+      const suppliersResult = await fetch(
+        "https://sgi-server.herokuapp.com/fornecedores"
+      );
       const suppliersData = await suppliersResult.json();
       setFornecedores(suppliersData);
     }
     async function getCategories() {
-      const categoriesResult = await fetch("http://localhost:3333/categorias");
+      const categoriesResult = await fetch(
+        "https://sgi-server.herokuapp.com/categorias"
+      );
       const categoriesData = await categoriesResult.json();
       setCategorias(categoriesData);
     }
@@ -76,7 +81,9 @@ const ProductForm = () => {
       <h1 className="page-title">Cadastro de produto</h1>
       <hr />
       <div className="product-image-container">
-        {imageUrl && <img className="product-image" src={imageUrl} />}
+        {imageUrl && (
+          <img className="product-image" src={imageUrl} alt="product-image" />
+        )}
       </div>
       <div className="form-group">
         <label>
@@ -114,7 +121,7 @@ const ProductForm = () => {
               name="price"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              placeholder="21,99"
+              placeholder="3,79"
               required
             />
           </label>
@@ -124,18 +131,17 @@ const ProductForm = () => {
           <label>
             <input
               type="radio"
-              name="kg"
-              value="kg"
+              name="measure"
+              value="un"
               onChange={(e) => setMeasure(e.target.value)}
-              checked
             />
             un.
           </label>
           <label>
             <input
               type="radio"
-              name="kg"
-              value={measure}
+              name="measure"
+              value="kg"
               onChange={(e) => setMeasure(e.target.value)}
             />
             kg
@@ -195,7 +201,7 @@ const ProductForm = () => {
         </label>
       </div>
       <div className="btn-group">
-      <button className="btn-save" onSubmit={handleSubmit}>
+        <button className="btn-save" onSubmit={handleSubmit}>
           Salvar
         </button>
         <button className="btn-cancel" onClick={() => navigate("/mapa")}>

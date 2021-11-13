@@ -100,6 +100,7 @@ const CompanyForm = () => {
         coordinates: [latitude, longitude],
       }),
     });
+    console.log(response)
   }; 
 
   useEffect(() => {
