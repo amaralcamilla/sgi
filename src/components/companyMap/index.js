@@ -10,9 +10,11 @@ const CompanyMap = () => {
       const companyResult = await fetch("https://sgi-server.herokuapp.com/empresas");
       const companyData = await companyResult.json();
       setCompanies(companyData);
-    }
+      console.log(companyResult)
+    }  
     getCompany();
   }, []);
+
 
   return (
     <div className="map-container">
