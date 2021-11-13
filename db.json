@@ -166,11 +166,28 @@
       "uf": "BA",
       "coordinates": ["-14.893244355796813", "-40.83123389701992"],
       "id": 5
+    },
+    {
+      "corporate_name": "Nacadeira Alimentos Ltda.",
+      "trade_name": "Namesa Alimentos",
+      "cnpj": "12.345.345/0001-12",
+      "sector": "Distribuidor de Alimentos",
+      "email": "namesa@alimentos.com.br",
+      "site": "http://www.namesa.com.br",
+      "cep": "76.822-170",
+      "address": "Rua Leopoldina",
+      "address_number": "4705",
+      "address_comp": "B",
+      "neighborhood": "Nova Esperança",
+      "city": "Porto Velho",
+      "uf": "RO",
+      "coordinates": ["-8.723509973311065", "-63.87458713573819"],
+      "id": 6
     }
   ],
   "setores": [
     "Restaurante/Food Service",
-    "Supermercado/Hortifrúti",
+    "Supermercado/Hortifruti",
     "Distribuidor de alimentos",
     "Indústria de alimento/bebida",
     "Produtor Rural",

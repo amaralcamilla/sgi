@@ -7,14 +7,15 @@ const CompanyMap = () => {
 
   useEffect(() => {
     async function getCompany() {
-      const companyResult = await fetch("https://sgi-server.herokuapp.com/empresas");
+      const companyResult = await fetch(
+        "https://sgi-server.herokuapp.com/empresas"
+      );
       const companyData = await companyResult.json();
       setCompanies(companyData);
-      console.log(companyResult)
-    }  
+      console.log(companyResult);
+    }
     getCompany();
   }, []);
-
 
   return (
     <div className="map-container">
@@ -31,10 +32,13 @@ const CompanyMap = () => {
         {companies.map((item) => (
           <Marker position={item.coordinates}>
             <Popup>
-              <p>Razão Social: {item.corporate_name}</p>
-              <p>Nome Fantasia: {item.trade_name}</p>
-              <p>CNPJ: {item.cnpj}</p>
-              <p>E-mail: {item.email}</p>
+              <div className="info-map">
+                <p>Razão Social: {item.corporate_name}</p>
+                <p>Nome Fantasia: {item.trade_name}</p>
+                <p>Setor: {item.sector}</p>
+                <p>CNPJ: {item.cnpj}</p>
+                <p>{item.city}/{item.uf}</p>
+              </div>
             </Popup>
           </Marker>
         ))}
