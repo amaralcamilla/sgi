@@ -29,7 +29,7 @@ const MapPage = () => {
           <button
             className="btn-logout"
             title="Sair"
-            onClick={() => Navigate("/login")}
+            onClick={() => Navigate("/")}
           >
             <IoLogOutOutline size="25" />{" "}
           </button>
