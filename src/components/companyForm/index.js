@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import {mask} from 'remask'
+import { mask } from "remask";
 
 const CompanyForm = () => {
   const [corporateName, setCorporateName] = useState("");
@@ -157,7 +157,9 @@ const CompanyForm = () => {
               type="text"
               name="cnpj"
               value={cnpj}
-              onChange={(e) => setCnpj(mask(e.target.value, ['99.999.999/9999-99']))}
+              onChange={(e) =>
+                setCnpj(mask(e.target.value, ["99.999.999/9999-99"]))
+              }
               placeholder="00.000.000/0000-00"
               required
             />
@@ -172,7 +174,7 @@ const CompanyForm = () => {
               value={sector}
               onChange={(e) => setSector(e.target.value)}
             >
-              <option value="" selected disabled>
+              <option value="" defaultValue disabled>
                 Selecione
               </option>
               {setores.map((sector) => (
@@ -218,7 +220,7 @@ const CompanyForm = () => {
               type="text"
               name="cep"
               value={cep}
-              onChange={(e) => setCep(mask(e.target.value, ['99.999-999']))}
+              onChange={(e) => setCep(mask(e.target.value, ["99.999-999"]))}
               placeholder="00.000-000"
               required
             />
