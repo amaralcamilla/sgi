@@ -219,3 +219,7 @@ hr {
 .btn-cancel:hover {
   background-color: #494949d9;
 }
+@media only screen and (max-width: 600px){
+  .item-99, .item-79, .item-59, .item-49 {width: 100%;}
+  .item-29, .item-19, .item-9 {width: 50%;}
+}
