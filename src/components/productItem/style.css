@@ -1,9 +1,8 @@
 .product-thumb-container {
   list-style: none;
-  width: 200px;
-  height: 300px;
+  width: 190px;
+  height: 280px;
 
-  margin: 30px 10px 10px 30px;
   border: 1px solid #0065a09c;
   border-radius: 10px;
 
@@ -16,7 +15,7 @@
 }
 
 .product-thumb-image {
-  max-width: 180px;
+  max-width: 170px;
   max-height: 130px;
   object-fit: cover;
   margin: 20px;
