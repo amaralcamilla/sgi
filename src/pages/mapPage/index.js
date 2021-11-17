@@ -21,7 +21,7 @@ const MapPage = () => {
           <button
             className="menu-item"
             title="Produto"
-            onClick={() => Navigate("/produto")}
+            onClick={() => Navigate("/produtos")}
           >
             <IoFastFoodOutline size="25" />{" "}
           </button>
@@ -36,11 +36,8 @@ const MapPage = () => {
         </div>
       </Header>
       <CompanyMap />
-      <div className="add-company">
-        <button
-          className="btn-add-company"
-          onClick={() => Navigate("/empresa")}
-        >
+      <div className="add-item">
+        <button className="btn-add-item" onClick={() => Navigate("/empresa")}>
           <BsFillPlusCircleFill /> Cadastrar empresa
         </button>
       </div>

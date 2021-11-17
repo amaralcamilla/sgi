@@ -77,7 +77,7 @@ const ProductForm = () => {
   //alert("Produto cadastrado com sucesso.")
   const navigate = useNavigate();
   return (
-    <form className="container-form" onSubmit={handleSubmit}>
+    <form className="main-container" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de produto</h1>
       <hr />
       <div className="product-image-container">
@@ -204,7 +204,7 @@ const ProductForm = () => {
         <button className="btn-save" onSubmit={handleSubmit}>
           Salvar
         </button>
-        <button className="btn-cancel" onClick={() => navigate("/mapa")}>
+        <button className="btn-cancel" onClick={() => navigate("/produtos")}>
           Cancelar
         </button>
       </div>

@@ -18,7 +18,7 @@ const CompanyPage = () => {
           <button
             className="menu-item"
             title="Produto"
-            onClick={() => Navigate("/produto")}
+            onClick={() => Navigate("/produtos")}
           >
             {" "}
             <IoFastFoodOutline size="25" />{" "}

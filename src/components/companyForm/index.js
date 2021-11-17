@@ -117,7 +117,7 @@ const CompanyForm = () => {
 
   //alert("Empresa cadastrada com sucesso.")
   return (
-    <form className="container-form" onSubmit={handleSubmit}>
+    <form className="main-container" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de empresa</h1>
       <hr />
 
