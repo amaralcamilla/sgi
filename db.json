@@ -2,21 +2,21 @@
   "produtos": [
     {
       "image_url": "https://images.pexels.com/photos/161559/background-bitter-breakfast-bright-161559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "product_name": "Laranja",
+      "product_name": "Laranja Bahia",
       "price": "1,89",
       "measure": "kg",
       "suppliers": "Lucato",
-      "categories": "Frutas",
+      "categories": "Fruta",
       "product_description": "Rica em fibras, vitaminas A, B e C, flavonoides e betacaroteno com propriedades antioxidantes e anti-inflamatórias, que auxiliam no combate ao envelhecimento precoce.",
       "id": 1
     },
     {
       "image_url": "https://cdn.pixabay.com/photo/2013/03/02/01/25/aubergine-89044_960_720.jpg",
-      "product_name": "Berinjela",
+      "product_name": "Berinjela orgânica",
       "price": "4,90",
       "measure": "kg",
       "suppliers": "MNS",
-      "categories": "Legumes",
+      "categories": "Legume",
       "product_description": "Fonte de vitamina B5 e sais minerais como cálcio, fósforo, ferro e fibra solúvel.",
       "id": 2
     },
@@ -26,17 +26,17 @@
       "price": "1,90",
       "measure": "un",
       "suppliers": "Cantu",
-      "categories": "Verduras",
+      "categories": "Verdura",
       "product_description": "Baixa caloria, rica em vitamina C, carotenoides, folatos, clorofila e compostos fenólicos.",
       "id": 3
     },
     {
       "image_url": "https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019_960_720.jpg",
-      "product_name": "Banana",
+      "product_name": "Banana Caturra",
       "price": "2,50",
       "measure": "kg",
-      "suppliers": "Trebeschi Tomates",
-      "categories": "Frutas",
+      "suppliers": "Natural da Terra",
+      "categories": "Fruta",
       "product_description": "Rica em carboidrato, potássio, magnésio e fibras. Aumenta saciedade, melhora trânsito intestinal e auxilia no combate à depressão.",
       "id": 4
     },
@@ -46,7 +46,7 @@
       "price": "5,60",
       "measure": "kg",
       "suppliers": "Fischer",
-      "categories": "Frutas",
+      "categories": "Fruta",
       "product_description": "Além da pectina, uma fibra importante para controlar os níveis de colesterol no sangue, o kiwi contém magnésio, cobre, vitamina B6, niacina, vitamina A, riboflavina, cálcio, zinco, ferro, potássio, fósforo e os aminoácidos glutamato e arginina.",
       "id": 5
     },
@@ -56,7 +56,7 @@
       "price": "4,30",
       "measure": "kg",
       "suppliers": "Trebeschi Tomates",
-      "categories": "Frutas",
+      "categories": "Fruta",
       "product_description": "Rico em vitamina C e licopeno, auxilia na saúde cardiovascular. ",
       "id": 6
     },
@@ -66,17 +66,17 @@
       "price": "3,50",
       "measure": "un",
       "suppliers": "Grupo Benassi",
-      "categories": "Legumes",
+      "categories": "Legume",
       "product_description": "Fonte de betacaroteno, vitamina C e vitamina E e de vitaminas do complexo B. Ainda é rica em fibras e fonte de cálcio, ferro, fósforo e potássio.",
       "id": 7
     },
     {
       "image_url": "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999_960_720.png",
-      "product_name": "Uva Itália",
+      "product_name": "Uva Niágara",
       "price": "6,50",
       "measure": "un",
       "suppliers": "Natural One",
-      "categories": "Legumes",
+      "categories": "Fruta",
       "product_description": "Fonte de carboidratos, vitamina C, vitaminas do complexo B e sais minerais como ferro, cálcio e potássio. A uva, principalmente as escuras, possui potente ação antioxidante.",
       "id": 8
     }
@@ -208,12 +208,12 @@
     "Trebeschi Tomates"
   ],
   "categorias": [
-    "Frutas",
-    "Legumes",
-    "Verduras",
-    "Cereais",
-    "Leguminosas",
-    "Grãos e sementes",
+    "Fruta",
+    "Legume",
+    "Verdura",
+    "Cereal",
+    "Leguminosa",
+    "Grão/semente",
     "Outra"
   ]
 }
