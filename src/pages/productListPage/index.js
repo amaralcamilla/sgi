@@ -1,11 +1,11 @@
 import Header from "../../components/header";
-import ProductForm from "../../components/productForm";
+import ProductItem from "../../components/productItem";
 import { useNavigate } from "react-router";
 import { RiMapPin2Line } from "react-icons/ri";
-import { BsShopWindow } from "react-icons/bs";
+import { BsShopWindow, BsFillPlusCircleFill } from "react-icons/bs";
 import { IoLogOutOutline } from "react-icons/io5";
 
-const ProductPage = () => {
+const ProductListPage = () => {
   const Navigate = useNavigate();
   return (
     <>
@@ -36,9 +36,19 @@ const ProductPage = () => {
           </button>
         </div>
       </Header>
-      <ProductForm />
+
+      <div className="add-item">
+        <button
+          className="btn-add-item"
+          onClick={() => Navigate("/novoproduto")}
+        >
+          <BsFillPlusCircleFill /> Cadastrar produto
+        </button>
+      </div>
+
+      <ProductItem />
     </>
   );
 };
 
-export default ProductPage;
+export default ProductListPage;
