@@ -10,6 +10,7 @@ const CompanyForm = () => {
   const [setores, setSetores] = useState([]);
   const [email, setEmail] = useState("");
   const [site, setSite] = useState("");
+  const [logoUrl, setLogoUrl] = useState("");
   const [cep, setCep] = useState("");
   const [address, setAddress] = useState("");
   const [addressNumber, setAddressNumber] = useState("");
@@ -91,6 +92,7 @@ const CompanyForm = () => {
         sector: sector,
         email: email,
         site: site,
+        logo_url: logoUrl,
         cep: cep,
         address: address,
         address_number: addressNumber,
@@ -115,11 +117,16 @@ const CompanyForm = () => {
     getSector();
   }, []);
 
-  //alert("Empresa cadastrada com sucesso.")
   return (
     <form className="main-container" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de empresa</h1>
       <hr />
+
+      <div className="image-container">
+        {logoUrl && (
+          <img className="product-image" src={logoUrl} alt="company-logo" height="80" />
+        )}
+      </div>
 
       <div className="form-row">
         <div className="item-49">
@@ -211,6 +218,21 @@ const CompanyForm = () => {
           />
         </label>
       </div>
+
+      <div className="item-99">
+        <label>
+          URL da logomarca da empresa
+          <input
+            type="url"
+            name="logo"
+            value={logoUrl}
+            onChange={(e) => setLogoUrl(e.target.value)}
+            placeholder="http://"
+          />
+        </label>
+      </div>
+
+      <hr />
 
       <div className="form-row">
         <div className="item-19">
