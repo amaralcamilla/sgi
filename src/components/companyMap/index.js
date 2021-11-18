@@ -36,7 +36,7 @@ const CompanyMap = () => {
           <Marker position={item.coordinates}>
             <Popup >
               <div className="info-map">
-                <img className="company-thumb-image" src={item.logo_url}/>
+                <img className="company-thumb-image" alt="company-logo" src={item.logo_url}/>
                 <p style={{margin:2}}>Razão Social: {item.corporate_name}</p>
                 <p style={{margin:2}}>Nome Fantasia: {item.trade_name}</p>
                 <p style={{margin:2}}>Setor: {item.sector}</p>
