@@ -2,7 +2,7 @@ import Header from "../../components/header";
 import FastMenu from "../../components/fastMenu";
 import CompanyMap from "../../components/companyMap";
 import { useNavigate } from "react-router";
-import { BsShopWindow, BsFillPlusCircleFill } from "react-icons/bs";
+import { BsShopWindow } from "react-icons/bs";
 import { IoFastFoodOutline, IoLogOutOutline } from "react-icons/io5";
 
 const MapPage = () => {

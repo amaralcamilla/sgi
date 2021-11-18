@@ -1,16 +1,13 @@
 .product-thumb-container {
-  list-style: none;
-  width: 190px;
-  height: 280px;
-
-  border: 1px solid #0065a09c;
-  border-radius: 10px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  list-style: none;
+  width: 190px;
+  height: 280px;
+  border: 1px solid #0065a09c;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 

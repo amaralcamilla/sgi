@@ -16,7 +16,7 @@ const ProductListPage = () => {
             title="Mapa"
             onClick={() => navigate("/mapa")}
           >
-            <RiMapPin2Line size="25" />{" "}
+            <RiMapPin2Line size="25" />
           </button>
 
           <button
@@ -24,7 +24,7 @@ const ProductListPage = () => {
             title="Empresa"
             onClick={() => navigate("/empresa")}
           >
-            <BsShopWindow size="25" />{" "}
+            <BsShopWindow size="25" />
           </button>
 
           <button
@@ -32,7 +32,7 @@ const ProductListPage = () => {
             title="Sair"
             onClick={() => navigate("/")}
           >
-            <IoLogOutOutline size="25" />{" "}
+            <IoLogOutOutline size="25" />
           </button>
         </div>
       </Header>
