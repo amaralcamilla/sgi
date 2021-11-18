@@ -1,3 +1,6 @@
+**[Click here](https://sgi-paripassu.netlify.app/) to see the project preview**
+
+
 # Projeto #2 DEVinHouse - Módulo Front-end
 
 Você está prestes a entrar para o time de Desenvolvedores da DEVin Corp. Para concretizar a sua contratação, você deverá resolver um desafio utilizando React. O time de recrutamento necessita que você crie uma aplicação protótipo para o gerenciamento de empresas e produtos, chamada Sistema de Gestão Integrada - SGI.
