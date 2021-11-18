@@ -6,23 +6,23 @@ import { BsShopWindow, BsFillPlusCircleFill } from "react-icons/bs";
 import { IoLogOutOutline } from "react-icons/io5";
 
 const ProductListPage = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <Header>
-        <div className="menu">
+        <div className="header">
           <button
-            className="menu-item"
+            className="header-item"
             title="Mapa"
-            onClick={() => Navigate("/mapa")}
+            onClick={() => navigate("/mapa")}
           >
             <RiMapPin2Line size="25" />{" "}
           </button>
 
           <button
-            className="menu-item"
+            className="header-item"
             title="Empresa"
-            onClick={() => Navigate("/empresa")}
+            onClick={() => navigate("/empresa")}
           >
             <BsShopWindow size="25" />{" "}
           </button>
@@ -30,7 +30,7 @@ const ProductListPage = () => {
           <button
             className="btn-logout"
             title="Sair"
-            onClick={() => Navigate("/")}
+            onClick={() => navigate("/")}
           >
             <IoLogOutOutline size="25" />{" "}
           </button>
@@ -40,7 +40,7 @@ const ProductListPage = () => {
       <div className="add-item">
         <button
           className="btn-add-item"
-          onClick={() => Navigate("/novoproduto")}
+          onClick={() => navigate("/novoproduto")}
         >
           <BsFillPlusCircleFill /> Cadastrar produto
         </button>

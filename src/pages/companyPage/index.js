@@ -5,20 +5,24 @@ import { RiMapPin2Line } from "react-icons/ri";
 import { IoFastFoodOutline, IoLogOutOutline } from "react-icons/io5";
 
 const CompanyPage = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <Header>
-        <div className="menu">
-          <button className="menu-item" title="Mapa" onClick={() => Navigate("/mapa")}>
+        <div className="header">
+          <button
+            className="header-item"
+            title="Mapa"
+            onClick={() => navigate("/mapa")}
+          >
             {" "}
             <RiMapPin2Line size="25" />{" "}
           </button>
 
           <button
-            className="menu-item"
+            className="header-item"
             title="Produto"
-            onClick={() => Navigate("/produtos")}
+            onClick={() => navigate("/produtos")}
           >
             {" "}
             <IoFastFoodOutline size="25" />{" "}
@@ -27,7 +31,7 @@ const CompanyPage = () => {
           <button
             className="btn-logout"
             title="Sair"
-            onClick={() => Navigate("/")}
+            onClick={() => navigate("/")}
           >
             {" "}
             <IoLogOutOutline size="25" />{" "}

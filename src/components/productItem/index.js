@@ -17,8 +17,8 @@ const ProductItem = () => {
 
   return (
     <div className="main-container">
-      <h1 className="page-title" style={{ marginTop: "0px" }}>
-        Produtos cadastrados
+      <h1 className="page-title">
+        Lista de produtos
       </h1>
 
       <hr />
@@ -32,7 +32,7 @@ const ProductItem = () => {
             />
 
             <h4>{item.product_name}</h4>
-            <p className="product-info">
+            <p className="product-info" style={{fontSize:16}}>
               R${item.price}/{item.measure}
             </p>
             <p className="product-info">

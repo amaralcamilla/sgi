@@ -19,8 +19,11 @@ const CompanyMap = () => {
 
   return (
     <div className="map-container">
-      <MapContainer
-        center={[-13.2917, -53.7234]}
+      <h1 className="page-title">Empresas cadastradas</h1>
+     <hr />
+      <MapContainer 
+      
+        center={[-12.747492, -57.470339]}
         zoom={4}
         scrollWheelZoom={true}
       >
@@ -31,13 +34,15 @@ const CompanyMap = () => {
 
         {companies.map((item) => (
           <Marker position={item.coordinates}>
-            <Popup>
+            <Popup >
               <div className="info-map">
-                <p>Razão Social: {item.corporate_name}</p>
-                <p>Nome Fantasia: {item.trade_name}</p>
-                <p>Setor: {item.sector}</p>
-                <p>CNPJ: {item.cnpj}</p>
-                <p>{item.city}/{item.uf}</p>
+                <img className="company-thumb-image" src={item.logo_url}/>
+                <p style={{margin:2}}>Razão Social: {item.corporate_name}</p>
+                <p style={{margin:2}}>Nome Fantasia: {item.trade_name}</p>
+                <p style={{margin:2}}>Setor: {item.sector}</p>
+                <p style={{margin:2}}>CNPJ: {item.cnpj}</p>
+                <p style={{margin:2}}> <strong>{item.city}/{item.uf}</strong></p>
+                
               </div>
             </Popup>
           </Marker>

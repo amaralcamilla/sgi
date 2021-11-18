@@ -1,45 +1,46 @@
 import Header from "../../components/header";
+import FastMenu from "../../components/fastMenu";
 import CompanyMap from "../../components/companyMap";
 import { useNavigate } from "react-router";
 import { BsShopWindow, BsFillPlusCircleFill } from "react-icons/bs";
 import { IoFastFoodOutline, IoLogOutOutline } from "react-icons/io5";
 
 const MapPage = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <Header>
-        <div className="menu">
+        <div className="header">
           <button
-            className="menu-item"
+            className="header-item"
             title="Empresa"
-            onClick={() => Navigate("/empresa")}
+            onClick={() => navigate("/empresa")}
           >
-            <BsShopWindow size="25" />{" "}
+            <BsShopWindow size="25" />
           </button>
 
           <button
-            className="menu-item"
+            className="header-item"
             title="Produto"
-            onClick={() => Navigate("/produtos")}
+            onClick={() => navigate("/produtos")}
           >
-            <IoFastFoodOutline size="25" />{" "}
+            <IoFastFoodOutline size="25" />
           </button>
 
           <button
             className="btn-logout"
             title="Sair"
-            onClick={() => Navigate("/")}
+            onClick={() => navigate("/")}
           >
-            <IoLogOutOutline size="25" />{" "}
+            <IoLogOutOutline size="25" />
           </button>
         </div>
       </Header>
-      <CompanyMap />
-      <div className="add-item">
-        <button className="btn-add-item" onClick={() => Navigate("/empresa")}>
-          <BsFillPlusCircleFill /> Cadastrar empresa
-        </button>
+
+      <div className="home-container">
+        <FastMenu />
+
+        <CompanyMap />
       </div>
     </>
   );

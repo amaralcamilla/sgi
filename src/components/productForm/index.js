@@ -74,13 +74,12 @@ const ProductForm = () => {
     getCategories();
   }, []);
 
-  //alert("Produto cadastrado com sucesso.")
   const navigate = useNavigate();
   return (
     <form className="main-container" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de produto</h1>
       <hr />
-      <div className="product-image-container">
+      <div className="image-container">
         {imageUrl && (
           <img className="product-image" src={imageUrl} alt="product" />
         )}
