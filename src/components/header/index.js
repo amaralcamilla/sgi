@@ -1,6 +1,8 @@
 import Logo from "../../assets/logo192_negative.png";
+import { useNavigate } from "react-router";
 
 const Header = ({ children }) => {
+  const navigate = useNavigate();
   return (
     <header>
       <nav className="nav-bar">
@@ -8,8 +10,9 @@ const Header = ({ children }) => {
           className="white-logo"
           src={Logo}
           alt="logo"
-          width="50"
-          height="50"
+          width="60"
+          height="60"
+          onClick={() => navigate("/mapa")}
         />
         <div>{children}</div>
       </nav>
