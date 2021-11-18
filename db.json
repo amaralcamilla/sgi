@@ -3,7 +3,7 @@
     {
       "image_url": "https://images.pexels.com/photos/161559/background-bitter-breakfast-bright-161559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "product_name": "Laranja Bahia",
-      "price": "1,89",
+      "price": "1.89",
       "measure": "kg",
       "suppliers": "Lucato",
       "categories": "Fruta",
@@ -11,9 +11,9 @@
       "id": 1
     },
     {
-      "image_url": "https://cdn.pixabay.com/photo/2013/03/02/01/25/aubergine-89044_960_720.jpg",
+      "image_url": "https://media.istockphoto.com/photos/fresh-eggplants-isolated-on-white-background-with-clipping-path-picture-id1139455611?k=20&m=1139455611&s=612x612&w=0&h=c1OHGd2xFrprv_cKbXxyMlgbs3S1xF-XxVxLadB4ySc=",
       "product_name": "Berinjela orgânica",
-      "price": "4,90",
+      "price": "4.90",
       "measure": "kg",
       "suppliers": "MNS",
       "categories": "Legume",
@@ -23,7 +23,7 @@
     {
       "image_url": "https://cdn.pixabay.com/photo/2016/03/05/22/01/lettuce-1239155_960_720.jpg",
       "product_name": "Alface crespa",
-      "price": "1,90",
+      "price": "1.90",
       "measure": "un",
       "suppliers": "Cantu",
       "categories": "Verdura",
@@ -33,7 +33,7 @@
     {
       "image_url": "https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019_960_720.jpg",
       "product_name": "Banana Caturra",
-      "price": "2,50",
+      "price": "2.50",
       "measure": "kg",
       "suppliers": "Natural da Terra",
       "categories": "Fruta",
@@ -41,39 +41,39 @@
       "id": 4
     },
     {
-      "image_url": "https://cdn.pixabay.com/photo/2016/03/23/04/44/fruits-and-vegetables-1274079_960_720.png",
-      "product_name": "Kiwi neozelandês",
-      "price": "5,60",
-      "measure": "kg",
-      "suppliers": "Fischer",
-      "categories": "Fruta",
-      "product_description": "Além da pectina, uma fibra importante para controlar os níveis de colesterol no sangue, o kiwi contém magnésio, cobre, vitamina B6, niacina, vitamina A, riboflavina, cálcio, zinco, ferro, potássio, fósforo e os aminoácidos glutamato e arginina.",
-      "id": 5
-    },
-    {
       "image_url": "https://cdn.pixabay.com/photo/2016/03/05/19/03/tomatoes-1238255_960_720.jpg",
       "product_name": "Tomate italiano",
-      "price": "4,30",
+      "price": "4.30",
       "measure": "kg",
       "suppliers": "Trebeschi Tomates",
       "categories": "Fruta",
-      "product_description": "Rico em vitamina C e licopeno, auxilia na saúde cardiovascular. ",
-      "id": 6
+      "product_description": "Rico em vitamina C e licopeno, auxilia na saúde cardiovascular.",
+      "id": 5
     },
     {
-      "image_url": "https://cdn.pixabay.com/photo/2015/09/28/23/26/pumpkin-963043_960_720.jpg",
+      "image_url": "https://media.istockphoto.com/photos/pumpkin-picture-id1181414512?k=20&m=1181414512&s=612x612&w=0&h=sIskbheUDmCW746TrKIzdWokVV5UskfQi8vHKI0MFUo=",
       "product_name": "Abóbora Moranga",
-      "price": "3,50",
+      "price": "3.50",
       "measure": "un",
       "suppliers": "Grupo Benassi",
       "categories": "Legume",
       "product_description": "Fonte de betacaroteno, vitamina C e vitamina E e de vitaminas do complexo B. Ainda é rica em fibras e fonte de cálcio, ferro, fósforo e potássio.",
+      "id": 6
+    },
+    {
+      "image_url": "https://cdn.pixabay.com/photo/2016/03/23/04/44/fruits-and-vegetables-1274079_960_720.png",
+      "product_name": "Kiwi neozelandês",
+      "price": "5.60",
+      "measure": "kg",
+      "suppliers": "Fischer",
+      "categories": "Fruta",
+      "product_description": "Além da pectina, uma fibra importante para controlar os níveis de colesterol no sangue, o kiwi contém magnésio, cobre, vitamina B6, niacina, vitamina A, riboflavina, cálcio, zinco, ferro, potássio, fósforo e os aminoácidos glutamato e arginina.",
       "id": 7
     },
     {
-      "image_url": "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999_960_720.png",
+      "image_url": "https://media.istockphoto.com/photos/ripe-red-grape-pink-bunch-with-leaves-isolated-on-white-with-clipping-picture-id682505832?k=20&m=682505832&s=612x612&w=0&h=Ie9HoP3ovc1FdvxswEEZeAzmI_XIBtv6EFGhfqgf9d8=",
       "product_name": "Uva Niágara",
-      "price": "6,50",
+      "price": "6.50",
       "measure": "un",
       "suppliers": "Natural One",
       "categories": "Fruta",
