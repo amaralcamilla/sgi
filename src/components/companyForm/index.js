@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import Swal from 'sweetalert2';
 import { mask } from "remask";
 
 const CompanyForm = () => {
@@ -73,11 +74,20 @@ const CompanyForm = () => {
         return;
       }
       event.target.checkValidity();
-      alert("Empresa cadastrada com sucesso!");
+      
+      const Swal = require('sweetalert2');
+      Swal.fire({
+        title: "Empresa cadastrada com sucesso.",
+        icon: "success",
+        width: "24rem",
+        confirmButtonColor: "#0066A0",
+      });
       navigate("/mapa");
     } catch (error) {
       alert("Desculpe o transtorno. Estamos resolvendo o problema.");
     }
+
+    
 
     const response = await fetch("https://sgi-server.herokuapp.com/empresas", {
       headers: {

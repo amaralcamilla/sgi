@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 import "./style.css";
 
 const ProductForm = () => {
@@ -30,8 +31,14 @@ const ProductForm = () => {
         return;
       }
       event.target.checkValidity();
-      alert("Produto cadastrado com sucesso!");
-      navigate("/mapa");
+      const Swal = require("sweetalert2");
+      Swal.fire({
+        text: "Produto cadastrado com sucesso.",
+        icon: "success",
+        width: "24rem",
+        confirmButtonColor: "#0066A0",
+      });
+      navigate("/produtos");
     } catch (error) {
       alert("Desculpe o transtorno. Estamos resolvendo o problema.");
     }
@@ -203,9 +210,9 @@ const ProductForm = () => {
         <button className="btn-save" onSubmit={handleSubmit}>
           Salvar
         </button>
-        <button className="btn-cancel" onClick={() => navigate("/produtos")}>
+       <button className="btn-cancel" onClick={() => navigate("/produtos")}>
           Cancelar
-        </button>
+        </button> 
       </div>
     </form>
   );
