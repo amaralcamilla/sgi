@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import Swal from "sweetalert2";
-import "./style.css";
 
 const ProductForm = () => {
   const [imageUrl, setImageUrl] = useState("");
@@ -91,7 +89,7 @@ const ProductForm = () => {
           <img className="product-image" src={imageUrl} alt="product" />
         )}
       </div>
-      <div>
+      <div className="item-99">
         <label>
           URL da imagem
           <input
@@ -210,9 +208,38 @@ const ProductForm = () => {
         <button className="btn-save" onSubmit={handleSubmit}>
           Salvar
         </button>
-       <button className="btn-cancel" onClick={() => navigate("/produtos")}>
+
+        <button
+          className="btn-cancel"
+          onClick={() => {
+            Swal.fire({
+              title: "Tem certeza que deseja cancelar?",
+              text: "As informações já preenchidas serão perdidas.",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire({
+                  title: "Cadastro cancelado.",
+                  icon: "success",
+                  width: "24rem",
+                  confirmButtonColor: "#0066A0",
+                });
+                navigate("/produtos");
+              } else {
+                navigate("/novoproduto");
+              }
+            });
+          }}
+        >
           Cancelar
-        </button> 
+        </button>
+
+        {/* <button className="btn-cancel" onClick={() => navigate("/produtos")}>
+          Cancelar
+        </button>  */}
       </div>
     </form>
   );

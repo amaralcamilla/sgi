@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./style.css";
 
 const ProductItem = () => {
   const [produtos, setProdutos] = useState([]);
@@ -33,7 +32,7 @@ const ProductItem = () => {
 
             <h4>{item.product_name}</h4>
             <p className="product-info" style={{fontSize:16}}>
-              R${item.price}/{item.measure}
+              R$ {item.price}/{item.measure}
             </p>
             <p className="product-info">
               {item.categories} | <strong>{item.suppliers}</strong>

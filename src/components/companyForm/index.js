@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import Swal from 'sweetalert2';
 import { mask } from "remask";
 
 const CompanyForm = () => {
