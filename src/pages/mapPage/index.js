@@ -1,6 +1,7 @@
-import Header from "../../components/header";
-import FastMenu from "../../components/fastMenu";
-import CompanyMap from "../../components/companyMap";
+import Header from "../../components/Header";
+import FastMenu from "../../components/FastMenu";
+import CompanyMap from "../../components/CompanyMap";
+import Footer from "../../components/Footer";
 import { useNavigate } from "react-router";
 import { BsShopWindow } from "react-icons/bs";
 import { IoFastFoodOutline, IoLogOutOutline } from "react-icons/io5";
@@ -42,6 +43,8 @@ const MapPage = () => {
 
         <CompanyMap />
       </div>
+
+      <Footer />
     </>
   );
 };

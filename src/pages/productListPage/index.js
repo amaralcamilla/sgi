@@ -1,9 +1,11 @@
-import Header from "../../components/header";
-import ProductItem from "../../components/productItem";
+import Header from "../../components/Header";
+import ProductItem from "../../components/ProductItem";
+import Footer from "../../components/Footer";
 import { useNavigate } from "react-router";
 import { RiMapPin2Line } from "react-icons/ri";
 import { BsShopWindow, BsFillPlusCircleFill } from "react-icons/bs";
 import { IoLogOutOutline } from "react-icons/io5";
+
 
 const ProductListPage = () => {
   const navigate = useNavigate();
@@ -47,6 +49,7 @@ const ProductListPage = () => {
       </div>
 
       <ProductItem />
+      <Footer />
     </>
   );
 };

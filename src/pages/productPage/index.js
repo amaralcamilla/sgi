@@ -1,5 +1,6 @@
-import Header from "../../components/header";
-import ProductForm from "../../components/productForm";
+import Header from "../../components/Header";
+import ProductForm from "../../components/ProductForm";
+import Footer from "../../components/Footer";
 import { useNavigate } from "react-router";
 import { RiMapPin2Line } from "react-icons/ri";
 import { BsShopWindow } from "react-icons/bs";
@@ -16,7 +17,7 @@ const ProductPage = () => {
             title="Mapa"
             onClick={() => navigate("/mapa")}
           >
-            <RiMapPin2Line size="25" />{" "}
+            <RiMapPin2Line size="25" />
           </button>
 
           <button
@@ -24,7 +25,7 @@ const ProductPage = () => {
             title="Empresa"
             onClick={() => navigate("/empresa")}
           >
-            <BsShopWindow size="25" />{" "}
+            <BsShopWindow size="25" />
           </button>
 
           <button
@@ -32,11 +33,12 @@ const ProductPage = () => {
             title="Sair"
             onClick={() => navigate("/")}
           >
-            <IoLogOutOutline size="25" />{" "}
+            <IoLogOutOutline size="25" />
           </button>
         </div>
       </Header>
       <ProductForm />
+      <Footer />
     </>
   );
 };
