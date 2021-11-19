@@ -1,8 +1,8 @@
 import LoginPage from "./pages/LoginPage";
 import MapPage from "./pages/MapPage";
-import CompanyPage from "./pages/companyPage";
-import ProductListPage from "./pages/productListPage";
-import ProductPage from "./pages/productPage";
+import CompanyPage from "./pages/CompanyPage";
+import ProductListPage from "./pages/ProductListPage";
+import ProductPage from "./pages/ProductPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Router = () => {
