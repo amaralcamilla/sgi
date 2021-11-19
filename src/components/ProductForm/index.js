@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 
 const ProductForm = () => {
   const [imageUrl, setImageUrl] = useState("");
