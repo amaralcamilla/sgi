@@ -74,8 +74,8 @@ const CompanyForm = () => {
         return;
       }
       event.target.checkValidity();
-      
-      const Swal = require('sweetalert2');
+
+      const Swal = require("sweetalert2");
       Swal.fire({
         title: "Empresa cadastrada com sucesso.",
         icon: "success",
@@ -85,14 +85,12 @@ const CompanyForm = () => {
       navigate("/mapa");
     } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Desculpe o transtorno. Estamos resolvendo o problema.',
+        icon: "error",
+        title: "Oops...",
+        text: "Desculpe o transtorno. Estamos resolvendo o problema.",
         width: "24rem",
-      })
+      });
     }
-
-    
 
     const response = await fetch("https://sgi-server.herokuapp.com/empresas", {
       headers: {
@@ -121,17 +119,6 @@ const CompanyForm = () => {
     console.log(response);
   };
 
-  useEffect(() => {
-    async function getSector() {
-      const sectorResult = await fetch(
-        "https://sgi-server.herokuapp.com/setores"
-      );
-      const sectorData = await sectorResult.json();
-      setSetores(sectorData);
-    }
-    getSector();
-  }, []);
-
   const handleCancel = () => {
     Swal.fire({
       title: "Tem certeza que deseja cancelar?",
@@ -154,6 +141,39 @@ const CompanyForm = () => {
     });
   };
 
+  const handleGetAddress = async () => {
+    try {
+      const infoResponse = await fetch(
+        `https://viacep.com.br/ws/${cep.replace(/[^0-9]/, "")}/json/`
+      );
+      const infoResult = await infoResponse.json();
+
+      setAddress(infoResult.logradouro);
+      setNeighborhood(infoResult.bairro);
+      setAddressComp(infoResult.complemento);
+      setCity(infoResult.localidade);
+      setUf(infoResult.uf);
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "CEP inválido.",
+        width: "24rem",
+      });
+    }
+  };
+
+  useEffect(() => {
+    async function getSector() {
+      const sectorResult = await fetch(
+        "https://sgi-server.herokuapp.com/setores"
+      );
+      const sectorData = await sectorResult.json();
+      setSetores(sectorData);
+    }
+    getSector();
+  }, []);
+
   return (
     <form className="main-container" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de empresa</h1>
@@ -161,7 +181,12 @@ const CompanyForm = () => {
 
       <div className="image-container">
         {logoUrl && (
-          <img className="product-image" src={logoUrl} alt="company-logo" height="80" />
+          <img
+            className="product-image"
+            src={logoUrl}
+            alt="company-logo"
+            height="80"
+          />
         )}
       </div>
 
@@ -280,6 +305,7 @@ const CompanyForm = () => {
               name="cep"
               value={cep}
               onChange={(e) => setCep(mask(e.target.value, ["99.999-999"]))}
+              onBlur={handleGetAddress}
               placeholder="00.000-000"
               required
             />
