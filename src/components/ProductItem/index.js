@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const ProductItem = () => {
   const [produtos, setProdutos] = useState([]);
 
+  
   useEffect(() => {
     async function getProducts() {
       const productsResult = await fetch(

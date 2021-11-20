@@ -23,6 +23,7 @@ const CompanyForm = () => {
   const [longitude, setLongitude] = useState("");
 
   const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -42,9 +43,7 @@ const CompanyForm = () => {
         alert("E-mail é um campo obrigatório.");
         return;
       } else if (
-        !email.match(
-          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-        )
+        !email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
       ) {
         alert("Insira um e-mail válido.");
         return;
@@ -83,6 +82,7 @@ const CompanyForm = () => {
         confirmButtonColor: "#0066A0",
       });
       navigate("/mapa");
+
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -150,9 +150,9 @@ const CompanyForm = () => {
 
       setAddress(infoResult.logradouro);
       setNeighborhood(infoResult.bairro);
-      setAddressComp(infoResult.complemento);
       setCity(infoResult.localidade);
       setUf(infoResult.uf);
+
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -306,7 +306,6 @@ const CompanyForm = () => {
               value={cep}
               onChange={(e) => setCep(mask(e.target.value, ["99.999-999"]))}
               onBlur={handleGetAddress}
-              placeholder="00.000-000"
               required
             />
           </label>
@@ -319,7 +318,6 @@ const CompanyForm = () => {
               name="address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              placeholder="Av. Brasil"
               required
             />
           </label>
@@ -335,7 +333,6 @@ const CompanyForm = () => {
               name="addressNumber"
               value={addressNumber}
               onChange={(e) => setAddressNumber(e.target.value)}
-              placeholder="000"
               required
             />
           </label>
@@ -349,7 +346,7 @@ const CompanyForm = () => {
               name="addressComp"
               value={addressComp}
               onChange={(e) => setAddressComp(e.target.value)}
-              placeholder="Próximo à praça central."
+              placeholder="Bloco 3, Sala 7."
             />
           </label>
         </div>
@@ -362,7 +359,6 @@ const CompanyForm = () => {
               name="neighborhood"
               value={neighborhood}
               onChange={(e) => setNeighborhood(e.target.value)}
-              placeholder="Centro"
               required
             />
           </label>
@@ -378,7 +374,6 @@ const CompanyForm = () => {
               name="city"
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              placeholder="Florianópolis"
               required
             />
           </label>
@@ -391,7 +386,6 @@ const CompanyForm = () => {
               name="uf"
               value={uf}
               onChange={(e) => setUf(e.target.value)}
-              placeholder="SC"
               required
             />
           </label>

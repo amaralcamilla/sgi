@@ -7,6 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -36,8 +37,10 @@ const Login = () => {
 
   return (
     <form className="login-container" onSubmit={handleSubmit}>
+
       <img className="logo" src={Logo} alt="logo" width="150" height="100" />
       <h3>Sistema de Gestão Integrada</h3>
+
       <div className="login-form">
         <label>
           E-mail

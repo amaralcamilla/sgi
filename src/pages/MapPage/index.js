@@ -11,27 +11,25 @@ const MapPage = () => {
   return (
     <>
       <Header>
-          <button
-            className="header-item"
-            title="Empresa"
-            onClick={() => navigate("/empresa")}
-          >
-            <BsShopWindow size="25" />
-          </button>
+        <button
+          className="header-item"
+          title="Empresa"
+          onClick={() => navigate("/empresa")}
+        >
+          <BsShopWindow size="25" />
+        </button>
 
-          <button
-            className="header-item"
-            title="Produto"
-            onClick={() => navigate("/produtos")}
-          >
-            <IoFastFoodOutline size="25" />
-          </button>
-
+        <button
+          className="header-item"
+          title="Produto"
+          onClick={() => navigate("/produtos")}
+        >
+          <IoFastFoodOutline size="25" />
+        </button>
       </Header>
 
       <div className="home-container">
         <FastMenu />
-
         <CompanyMap />
       </div>
 

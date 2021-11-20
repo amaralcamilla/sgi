@@ -1,4 +1,3 @@
-import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useState, useEffect } from "react";
 
@@ -20,9 +19,8 @@ const CompanyMap = () => {
   return (
     <div className="map-container">
       <h1 className="page-title">Empresas cadastradas</h1>
-     <hr />
-      <MapContainer 
-      
+      <hr />
+      <MapContainer
         center={[-12.747492, -57.470339]}
         zoom={4}
         scrollWheelZoom={true}
@@ -34,15 +32,25 @@ const CompanyMap = () => {
 
         {companies.map((item) => (
           <Marker position={item.coordinates}>
-            <Popup >
+            <Popup>
               <div className="info-map">
-                <img className="company-thumb-image" alt="company-logo" src={item.logo_url}/>
-                <p style={{margin:2}}>Razão Social: {item.corporate_name}</p>
-                <p style={{margin:2}}>Nome Fantasia: {item.trade_name}</p>
-                <p style={{margin:2}}>Setor: {item.sector}</p>
-                <p style={{margin:2}}>CNPJ: {item.cnpj}</p>
-                <p style={{margin:2}}> <strong>{item.city}/{item.uf}</strong></p>
-                
+                <img
+                  className="company-thumb-image"
+                  alt="company-logo"
+                  src={item.logo_url}
+                />
+                <p style={{ margin: 2 }}>Razão Social: {item.corporate_name}</p>
+                <p style={{ margin: 2 }}>
+                  Nome Fantasia: <strong>{item.trade_name}</strong>
+                </p>
+                <p style={{ margin: 2 }}>Setor: {item.sector}</p>
+                <p style={{ margin: 2 }}>CNPJ: {item.cnpj}</p>
+                <p style={{ margin: 2 }}>
+                  {" "}
+                  <strong>
+                    {item.city}/{item.uf}
+                  </strong>
+                </p>
               </div>
             </Popup>
           </Marker>

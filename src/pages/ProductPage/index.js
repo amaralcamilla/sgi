@@ -10,24 +10,25 @@ const ProductPage = () => {
   return (
     <>
       <Header>
-          <button
-            className="header-item"
-            title="Mapa"
-            onClick={() => navigate("/mapa")}
-          >
-            <RiMapPin2Line size="25" />
-          </button>
+        <button
+          className="header-item"
+          title="Mapa"
+          onClick={() => navigate("/mapa")}
+        >
+          <RiMapPin2Line size="25" />
+        </button>
 
-          <button
-            className="header-item"
-            title="Empresa"
-            onClick={() => navigate("/empresa")}
-          >
-            <BsShopWindow size="25" />
-          </button>
-
+        <button
+          className="header-item"
+          title="Empresa"
+          onClick={() => navigate("/empresa")}
+        >
+          <BsShopWindow size="25" />
+        </button>
       </Header>
+
       <ProductForm />
+
       <Footer />
     </>
   );

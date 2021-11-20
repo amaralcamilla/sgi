@@ -13,6 +13,8 @@ const ProductForm = () => {
   const [categorias, setCategorias] = useState([]);
   const [productDescription, setProductDescription] = useState("");
 
+  const navigate = useNavigate();
+  
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -108,7 +110,6 @@ const ProductForm = () => {
     getCategories();
   }, []);
 
-  const navigate = useNavigate();
   return (
     <form className="main-container" onSubmit={handleSubmit}>
       <h1 className="page-title">Cadastro de produto</h1>
