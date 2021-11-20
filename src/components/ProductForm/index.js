@@ -69,7 +69,7 @@ const ProductForm = () => {
   const handleCancel = () => {
     Swal.fire({
       title: "Tem certeza que deseja cancelar?",
-      text: "As informações já preenchidas serão perdidas.",
+      text: "As informações preenchidas serão perdidas.",
       icon: "warning",
       width: "24rem",
       showCancelButton: true,
@@ -79,7 +79,7 @@ const ProductForm = () => {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Cadastro cancelado.",
-          icon: "success",
+          icon: "error",
           width: "24rem",
           confirmButtonColor: "#0066A0",
         });

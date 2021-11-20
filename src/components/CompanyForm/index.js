@@ -145,7 +145,7 @@ const CompanyForm = () => {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Cadastro cancelado.",
-          icon: "success",
+          icon: "error",
           width: "24rem",
           confirmButtonColor: "#0066A0",
         });
