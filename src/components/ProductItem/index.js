@@ -15,7 +15,7 @@ const ProductItem = () => {
   }, []);
 
   return (
-    <div className="main-container">
+    <div className="list-container">
       <h1 className="page-title">Lista de produtos</h1>
 
       <hr />
