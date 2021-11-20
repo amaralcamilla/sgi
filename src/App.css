@@ -216,6 +216,7 @@ footer {
 .home-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: 30px;
   margin-right: 4%;
@@ -257,7 +258,6 @@ footer {
 .add-item {
   display: flex;
   justify-content: flex-end;
-  margin-right: 10%;
 }
 .btn-add-item {
   font-family: inherit;
@@ -270,6 +270,7 @@ footer {
   cursor: pointer;
   position: absolute;
   margin-top: 20px;
+  margin-right: 10%;
 }
 .product-list {
   display: flex;
@@ -318,6 +319,7 @@ footer {
 .form-row {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .item-99 {
@@ -338,7 +340,6 @@ footer {
 }
 .item-19 {
   flex-basis: 19%;
-  align-self: flex-end;
 }
 .item-9 {
   flex-basis: 9%;
@@ -376,4 +377,30 @@ footer {
 }
 .btn-cancel:hover {
   background-color: #494949d9;
+}
+@media only screen and (max-width: 600px) {
+  input,
+  select {
+    margin-bottom: 10px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .fast-menu {
+    display: none;
+  }
+  .home-container {
+    margin-right: 0px;
+  }
+  .add-item {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .btn-add-item {
+    position: relative;
+    align-self: flex-start;
+    width: 180px;
+    margin-left: 10%;
+  }
 }

@@ -46,9 +46,9 @@ const ProductListPage = () => {
         >
           <BsFillPlusCircleFill /> Cadastrar produto
         </button>
-      </div>
-
+      
       <ProductItem />
+      </div>
       <Footer />
     </>
   );
