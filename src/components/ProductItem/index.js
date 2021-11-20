@@ -16,9 +16,7 @@ const ProductItem = () => {
 
   return (
     <div className="main-container">
-      <h1 className="page-title">
-        Lista de produtos
-      </h1>
+      <h1 className="page-title">Lista de produtos</h1>
 
       <hr />
       <ul className="product-list">
@@ -29,14 +27,15 @@ const ProductItem = () => {
               src={item.image_url}
               alt="product"
             />
-
-            <h4>{item.product_name}</h4>
-            <p className="product-info" style={{fontSize:16}}>
-              R$ {item.price}/{item.measure}
-            </p>
-            <p className="product-info">
-              {item.categories} | <strong>{item.suppliers}</strong>
-            </p>
+            <div style={{marginLeft: "12px"}}>
+              <h4>{item.product_name}</h4>
+              <p className="product-info" style={{ fontSize: 16 }}>
+                R$ {item.price}/{item.measure}
+              </p>
+              <p className="product-info">
+                {item.categories} | {item.suppliers}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
