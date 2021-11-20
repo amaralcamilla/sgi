@@ -71,6 +71,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 1%;
 }
 .footer-item {
   list-style: none;
@@ -93,13 +94,13 @@ footer {
   margin-bottom: 20px;
 }
 .white-logo {
-  margin-left: 80px;
+  margin-left: 5%;
   cursor: pointer;
 }
 .header {
   display: flex;
   flex-direction: row;
-  margin-right: 80px;
+  margin-right: 4%;
 }
 .page-title {
   display: block;
@@ -278,7 +279,7 @@ footer {
   cursor: pointer;
   position: absolute;
   margin-top: 20px;
-  margin-right: 10%;
+  margin-right: 5%;
   display: flex;
   gap: 8px;
 }
@@ -406,10 +407,10 @@ footer {
     margin-bottom: 10px;
   }
   .white-logo{
-    margin-left: 40px;
+    margin-left: 8%;
   }
   .header{
-    margin-right: 40px;
+    margin-right: 6%;
   }
   .login-container{
     margin: 25% auto;
@@ -433,6 +434,7 @@ footer {
     align-self: flex-start;
     width: 200px;
     margin-left: 7%;
+    margin-top: 10px;
   }
   .product-list{
     padding-left: 0;
@@ -449,5 +451,8 @@ footer {
   }
   .leaflet-container {
     margin-top: 10px;
+  }
+  .footer-list{
+    margin-left: 0;
   }
 }
