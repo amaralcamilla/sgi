@@ -279,6 +279,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0px;
 }
 .image-container {
   display: flex;
@@ -295,10 +296,9 @@ footer {
   display: flex;
   align-items: center;
   list-style: none;
-  background-color: #5fbb46;
+  background-color: #70A652;
   width: 360px;
   height: 140px;
-  border: 1px solid #0065a09c;
   border-radius: 0px 0px 80px 0px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   margin-right: 50px;
