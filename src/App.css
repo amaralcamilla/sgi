@@ -3,7 +3,7 @@ Cor principal #0066A0
 Azul secundário #1f77b4
 Azul de apoio #1aaacc
 Verde de apoio #5FBB46 
-Verde secundário #70A652
+Verde secundário #82BF5F
 Amarelo de apoio #ffbf00 #FFC20A
 */
 
@@ -296,7 +296,7 @@ footer {
   display: flex;
   align-items: center;
   list-style: none;
-  background-color: #70A652;
+  background-color: #82BF5F;
   width: 360px;
   height: 140px;
   border-radius: 0px 0px 80px 0px;
