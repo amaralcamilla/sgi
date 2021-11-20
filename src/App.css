@@ -422,9 +422,12 @@ footer {
   }
   .product-list{
     padding-left: 0;
+  
   }
   .product-thumb-container{
-    margin-left: 0px;
+    margin-left: 0px;  
+    margin-top: 0;
+    margin-bottom: 30px;
   }
   .list-container{
     width: 85%;
