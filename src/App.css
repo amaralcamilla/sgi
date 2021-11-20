@@ -411,6 +411,9 @@ footer {
   .header{
     margin-right: 40px;
   }
+  .login-container{
+    margin: 25% auto;
+  }
   .form-row {
     flex-direction: column;
   }
