@@ -39,7 +39,12 @@ const ProductForm = () => {
       });
       navigate("/produtos");
     } catch (error) {
-      alert("Desculpe o transtorno. Estamos resolvendo o problema.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Desculpe o transtorno. Estamos resolvendo o problema.",
+        width: "24rem",
+      });
     }
 
     const response = await fetch("https://sgi-server.herokuapp.com/produtos", {
@@ -60,6 +65,29 @@ const ProductForm = () => {
     });
     console.log(response);
   };
+
+  const handleCancel = () => {
+    Swal.fire({
+      title: "Tem certeza que deseja cancelar?",
+      text: "As informações já preenchidas serão perdidas.",
+      icon: "warning",
+      width: "24rem",
+      showCancelButton: true,
+      confirmButtonColor: "#0066A0",
+      cancelButtonColor: "#d33",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Cadastro cancelado.",
+          icon: "success",
+          width: "24rem",
+          confirmButtonColor: "#0066A0",
+        });
+        navigate("/produtos");
+      }
+    });
+  };
+
   useEffect(() => {
     async function getSuppliers() {
       const suppliersResult = await fetch(
@@ -132,7 +160,7 @@ const ProductForm = () => {
           </label>
         </div>
 
-        <div className="item-19">
+        <div className="item-19" style={{ alignSelf: "flex-end" }}>
           <label>
             <input
               type="radio"
@@ -210,37 +238,9 @@ const ProductForm = () => {
           Salvar
         </button>
 
-        <button
-          className="btn-cancel"
-          onClick={() => {
-            Swal.fire({
-              title: "Tem certeza que deseja cancelar?",
-              text: "As informações já preenchidas serão perdidas.",
-              icon: "warning",
-              showCancelButton: true,
-              confirmButtonColor: "#3085d6",
-              cancelButtonColor: "#d33",
-            }).then((result) => {
-              if (result.isConfirmed) {
-                Swal.fire({
-                  title: "Cadastro cancelado.",
-                  icon: "success",
-                  width: "24rem",
-                  confirmButtonColor: "#0066A0",
-                });
-                navigate("/produtos");
-              } else {
-                navigate("/novoproduto");
-              }
-            });
-          }}
-        >
+        <button className="btn-cancel" type="button" onClick={handleCancel}>
           Cancelar
         </button>
-
-        {/* <button className="btn-cancel" onClick={() => navigate("/produtos")}>
-          Cancelar
-        </button>  */}
       </div>
     </form>
   );

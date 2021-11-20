@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { mask } from "remask";
+import Swal from "sweetalert2";
 
 const CompanyForm = () => {
   const [corporateName, setCorporateName] = useState("");
@@ -83,7 +84,12 @@ const CompanyForm = () => {
       });
       navigate("/mapa");
     } catch (error) {
-      alert("Desculpe o transtorno. Estamos resolvendo o problema.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Desculpe o transtorno. Estamos resolvendo o problema.',
+        width: "24rem",
+      })
     }
 
     
@@ -125,6 +131,28 @@ const CompanyForm = () => {
     }
     getSector();
   }, []);
+
+  const handleCancel = () => {
+    Swal.fire({
+      title: "Tem certeza que deseja cancelar?",
+      text: "As informações preenchidas serão perdidas.",
+      icon: "warning",
+      width: "24rem",
+      showCancelButton: true,
+      confirmButtonColor: "#0066A0",
+      cancelButtonColor: "#d33",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Cadastro cancelado.",
+          icon: "success",
+          width: "24rem",
+          confirmButtonColor: "#0066A0",
+        });
+        navigate("/mapa");
+      }
+    });
+  };
 
   return (
     <form className="main-container" onSubmit={handleSubmit}>
@@ -373,7 +401,7 @@ const CompanyForm = () => {
         <button className="btn-save" onSubmit={handleSubmit}>
           Salvar
         </button>
-        <button className="btn-cancel" onClick={() => navigate("/mapa")}>
+        <button className="btn-cancel" type="button" onClick={handleCancel}>
           Cancelar
         </button>
       </div>
