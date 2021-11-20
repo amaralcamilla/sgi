@@ -147,7 +147,7 @@ footer {
   margin: 7% auto;
   border: 1px solid #35353572;
   border-radius: 10px;
-  width: 400px;
+  width: 360px;
 }
 .info-account {
   align-self: flex-start;
@@ -279,7 +279,6 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-left: 0px;
 }
 .image-container {
   display: flex;
@@ -422,8 +421,10 @@ footer {
     margin-left: 7%;
   }
   .product-list{
-    padding-left: 0px;
-    margin: 0px;
+    padding-left: 0;
+  }
+  .product-thumb-container{
+    margin-left: 0px;
   }
   .list-container{
     width: 85%;
