@@ -1,4 +1,5 @@
 ## Veja a preview: https://sgi-paripassu.netlify.app/
+Para acessar a tela de login: inserir um e-mail qualquer e o mínimo de 6 caracteres como senha.
 ## Assista ao [vídeo do desenvolvimento](https://www.linkedin.com/posts/amaralcamilla_devinhouse-senai-frontend-activity-6868653965689679872-8g4s)
 
 <hr>
