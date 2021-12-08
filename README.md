@@ -1,7 +1,8 @@
 ## Veja a preview: https://sgi-paripassu.netlify.app/
-## Assista o [vídeo do desenvolvimento](https://www.linkedin.com/posts/amaralcamilla_devinhouse-senai-frontend-activity-6868653965689679872-8g4s)
+## Assista ao [vídeo do desenvolvimento](https://www.linkedin.com/posts/amaralcamilla_devinhouse-senai-frontend-activity-6868653965689679872-8g4s)
 
 <hr>
+<br>
 
 # Projeto #2 DEVinHouse - Módulo Front-end
 
